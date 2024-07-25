@@ -1,0 +1,14 @@
+#Fibonacci Generator
+def fib(terms):
+    series=[0,1]
+    for i in range(2,terms):
+        new_term=series[i-2]+series[i-1]
+        series.append(new_term)
+    return series
+choice=int(input("Enter a number\n1 to Generate \n2 to Exit: "))
+while(choice!=2):
+    terms=int(input("Enter the total number of terms you want to generate:"))
+    result_series=fib(terms)
+    print(result_series)
+    choice=int(input("Enter a number\n1 to Generate \n2 to Exit: "))
+    
